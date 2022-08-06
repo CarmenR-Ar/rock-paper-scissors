@@ -41,7 +41,7 @@ body {
 .choice:hover {
     cursor: pointer;
     background-color: #1f1d1d;
-    transform: scale(1.15); // agranda la imagen con su borde
+    transform: scale(1.15); /* agranda la imagen con su borde */
 }
 
 .result {
