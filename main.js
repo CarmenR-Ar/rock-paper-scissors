@@ -55,7 +55,7 @@ function userWins(user, computer) {
     compChoice_p.innerHTML =`Computer choice: ${capitalize(computer)}`;
     const userBoard_div = document.getElementById('user-board');
     userBoard_div.classList.add('shine');
-    setTimeout(() => {userBoard_div.classList.remove('shine')}, 350);
+    setTimeout(() => {userBoard_div.classList.remove('shine')}, 400);
 }
 
 
@@ -66,7 +66,7 @@ function userLoses(user, computer) {
     compChoice_p.innerHTML =`Computer choice: ${capitalize(computer)}`;
     const compBoard_div = document.getElementById('comp-board');
     compBoard_div.classList.add('shine');
-    setTimeout(() => {compBoard_div.classList.remove('shine')}, 350);
+    setTimeout(() => {compBoard_div.classList.remove('shine')}, 400);
 }
 function draw(user, computer) {
     userChoice_p.innerHTML = `Your choice: ${capitalize(user)}`;
