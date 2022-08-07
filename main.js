@@ -23,32 +23,49 @@ function main() {
 }
 
 
-
 function computerPlay() {
     const options = ["rock", "paper", "scissors"];
     return options[Math.floor(Math.random() * options.length)]
 }
 
 
-
-
 function play(userChoice) {
     let computerChoice = computerPlay();
     
     if (userChoice === "rock" && computerChoice === "scissors" || userChoice === "scissors" && computerChoice === "paper" || userChoice === "paper" && computerChoice === "rock") {
-        userWins();
+        userWins(userChoice, computerChoice);
     } else if(computerChoice === "rock" && userChoice === "scissors" || computerChoice === "scissors" && userChoice === "paper" || computerChoice === "paper" && userChoice === "rock") {
-        userLoses();
+        userLoses(userChoice, computerChoice);
     } else if (computerChoice === "rock" && userChoice === "rock" || computerChoice === "paper" && userChoice === "paper" || computerChoice === "scissors" && userChoice === "scissors") {
-        draw();
+        draw(userChoice, computerChoice);
     }
 }
 
 
+function capitalize (word) {
+    return word[0].toUpperCase() + word.slice(1);
+}
 
-function userWins() {}
-function userLoses() {}
-function draw() {}
+
+
+function userWins(user, computer) {
+    userScore++;
+    userScore_div.textContent = userScore;
+    userChoice_p.innerHTML = `Your choice: ${capitalize(user)}`;
+    compChoice_p.innerHTML =`Computer choice: ${capitalize(computer)}`;
+}
+
+
+function userLoses(user, computer) {
+    computerScore++;
+    compScore_div.textContent = computerScore;
+    userChoice_p.innerHTML = `Your choice: ${capitalize(user)}`;
+    compChoice_p.innerHTML =`Computer choice: ${capitalize(computer)}`;
+}
+function draw(user, computer) {
+    userChoice_p.innerHTML = `Your choice: ${capitalize(user)}`;
+    compChoice_p.innerHTML =`Computer choice: ${capitalize(computer)}`;
+}
 
 
 
