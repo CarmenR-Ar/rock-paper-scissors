@@ -84,3 +84,8 @@ body {
     font-weight: bold;
     padding: 20px 0;
 }
+
+.shine {
+    border: 4px solid #371B58;
+    box-shadow: 0 0 20px #61497e;
+}

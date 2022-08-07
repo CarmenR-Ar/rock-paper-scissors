@@ -25,7 +25,7 @@ function main() {
 
 function computerPlay() {
     const options = ["rock", "paper", "scissors"];
-    return options[Math.floor(Math.random() * options.length)]
+    return options[Math.floor(Math.random() * options.length)];
 }
 
 
@@ -53,6 +53,9 @@ function userWins(user, computer) {
     userScore_div.textContent = userScore;
     userChoice_p.innerHTML = `Your choice: ${capitalize(user)}`;
     compChoice_p.innerHTML =`Computer choice: ${capitalize(computer)}`;
+    const userBoard_div = document.getElementById('user-board');
+    userBoard_div.classList.add('shine');
+    setTimeout(() => {userBoard_div.classList.remove('shine')}, 350);
 }
 
 
@@ -61,6 +64,9 @@ function userLoses(user, computer) {
     compScore_div.textContent = computerScore;
     userChoice_p.innerHTML = `Your choice: ${capitalize(user)}`;
     compChoice_p.innerHTML =`Computer choice: ${capitalize(computer)}`;
+    const compBoard_div = document.getElementById('comp-board');
+    compBoard_div.classList.add('shine');
+    setTimeout(() => {compBoard_div.classList.remove('shine')}, 350);
 }
 function draw(user, computer) {
     userChoice_p.innerHTML = `Your choice: ${capitalize(user)}`;
@@ -68,28 +74,5 @@ function draw(user, computer) {
 }
 
 
-
-// function game() {
-//     let round = 1;
-//     let computer = 0;
-//     let user = 0;
-//     while (round <= 5) {
-//         let play = playRound();
-//         if (play === "user wins") {
-//             user++;
-//         } else if (play === "computer wins") {
-//             computer++;
-//         } 
-//         round++;
-//     }
-//     console.log(`**** Final Score ****\n You: ${user} - Computer: ${computer}`);
-//     if (user > computer) {
-//         console.log("Congrats! You won!");
-//     } else if (user < computer) {
-//         console.log("Too bad! You lost :(");
-//     } else {
-//         console.log("It's a tie.")
-//     }
-// }
 
 main();    
