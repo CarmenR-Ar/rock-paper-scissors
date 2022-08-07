@@ -1,3 +1,30 @@
+let userScore = 0;
+let computerScore = 0;
+const rock_div = document.getElementById('rock');
+const paper_div = document.getElementById('paper');
+const scissors_div = document.getElementById('scissors');
+const userChoice_p = document.querySelector('#user-result');
+const compChoice_p = document.querySelector('#comp-result');
+const userScore_div = document.getElementById('user-score');
+const compScore_div = document.getElementById('comp-score');
+
+
+
+
+console.log(rock_div);
+console.log(compChoice_p);
+
+
+
+
+
+function main() {}
+function play() {}
+function userWins() {}
+function userLoses() {}
+function draw() {}
+
+
 // function computerPlay() {
 //     const options = ["rock", "paper", "scissors"];
 //     return options[Math.floor(Math.random() * options.length)]
@@ -19,7 +46,7 @@
 // }
 
 
-// function playRound() {
+// function play() {
 //     let computer_selection = computerPlay();
 //     let player_selection = userPlay();
 //     if (player_selection === "rock" && computer_selection === "scissors" || player_selection === "scissors" && computer_selection === "paper" || player_selection === "paper" && computer_selection === "rock") {
